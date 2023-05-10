@@ -3,6 +3,7 @@ package com.example.login_app
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class RegisterActivity : AppCompatActivity() {
@@ -18,5 +19,10 @@ class RegisterActivity : AppCompatActivity() {
         etUsername = findViewById(R.id.etRUserName)
         etPassword = findViewById(R.id.etRPassword)
         btnRegister = findViewById(R.id.btnRegister)
+
+        btnRegister.setOnClickListener{
+            Toast.makeText(this, " has been registered", Toast.LENGTH_SHORT).show()
+        }
     }
+
 }
