@@ -129,7 +129,7 @@
             <TextView
                 android:id="@+id/tvLoginLink"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="47dp"
                 android:layout_marginTop="48dp"
                 android:text="Already a user?\nClick here to login"
                 android:textColor="@color/colorPrimary"

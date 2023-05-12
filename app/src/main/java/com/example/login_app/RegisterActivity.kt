@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import okhttp3.ResponseBody
@@ -12,52 +13,25 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.io.IOException
 
-lateinit var etUsername: EditText
-lateinit var etPassword: EditText
-lateinit var btnRegister: Button
-lateinit var password: String
-lateinit var userName: String
+private lateinit var etUsername: EditText
+private lateinit var etPassword: EditText
+private lateinit var password: String
+private lateinit var userName: String
+
 class RegisterActivity : AppCompatActivity() {
-
-//    lateinit var etUsername: EditText
-//    lateinit var etPassword: EditText
-//    lateinit var btnRegister: Button
-//    lateinit var password: String
-//    lateinit var userName: String
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-        var Username: EditText
-        var Password: EditText
-        var UsernameString: String
-        var PasswordString: String
-        var btnRegister: Button
-
         etUsername = findViewById(R.id.etRUserName)
         etPassword = findViewById(R.id.etRPassword)
-        btnRegister = findViewById(R.id.btnRegister)
 
-
-
-        btnRegister.setOnClickListener{
-           // Toast.makeText(this, " has been registered", Toast.LENGTH_SHORT).show()
-            Username= findViewById(R.id.etRUserName)
-            Password=findViewById(R.id.etRPassword)
-
-            UsernameString = Username.getText().toString()
-            PasswordString = Password.getText().toString()
-
-            registerUser(Username,Password)
+        var etButton=findViewById<Button>(R.id.btnRegister)
+        etButton.setOnClickListener {
+            registerUser()
         }
     }
 
-    fun getData(Name:String){
-        Toast.makeText(this, Name + "Has been registered", Toast.LENGTH_SHORT).show();
-    }
-
-    private fun registerUser(Name:EditText, Password:EditText) {
+    private fun registerUser() {
         val userName: String = etUsername.getText().toString().trim()
         val password: String = etPassword.getText().toString().trim()
         if (userName.isEmpty()) {
@@ -73,7 +47,7 @@ class RegisterActivity : AppCompatActivity() {
             .getInstance()
             .api
             .createUser(User(userName, password))
-       call.enqueue(object : Callback<ResponseBody?> {
+        call.enqueue(object : Callback<ResponseBody?> {
             override fun onResponse(call: Call<ResponseBody?>?, response: Response<ResponseBody?>) {
                 var s = ""
                 try {
@@ -94,13 +68,16 @@ class RegisterActivity : AppCompatActivity() {
                         .show()
                 }
             }
+            override fun onFailure(call: Call<ResponseBody?>, t: Throwable) {
+                Toast.makeText(this@RegisterActivity, "User exists!", Toast.LENGTH_LONG).show()
+            }
 
-           override fun onFailure(call: Call<ResponseBody?>, t: Throwable) {
-               TODO("Not yet implemented")
-               Toast.makeText(this@RegisterActivity, "User exists!", Toast.LENGTH_LONG)
-           }
-
-       })
+        })
     }
 
 }
+
+
+   // fun getData(Name:String){
+    //    Toast.makeText(this, Name + "Has been registered", Toast.LENGTH_SHORT).show();
+   // }
