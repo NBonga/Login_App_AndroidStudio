@@ -29,6 +29,9 @@ class RegisterActivity : AppCompatActivity() {
         etButton.setOnClickListener {
             registerUser()
         }
+        this.findViewById<TextView>(R.id.tvLoginLink).setOnClickListener{
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
     }
 
     private fun registerUser() {

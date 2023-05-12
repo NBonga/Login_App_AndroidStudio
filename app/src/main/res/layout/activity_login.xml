@@ -62,7 +62,7 @@
                 android:layout_marginLeft="10dp"
                 android:textStyle="bold" />
             <EditText
-                android:id="@+id/etRUserName"
+                android:id="@+id/etUserName"
                 android:hint="@string/holderUN"
                 android:inputType="textEmailAddress"
                 android:layout_width="match_parent"
@@ -86,7 +86,7 @@
                 android:layout_marginLeft="10dp"
                 android:textStyle="bold" />
             <EditText
-                android:id="@+id/etRPassword"
+                android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:ems="10"
@@ -127,7 +127,7 @@
             android:layout_marginTop="300dp">
 
             <TextView
-                android:id="@+id/tvLoginLink"
+                android:id="@+id/tvRegisterLink"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="48dp"
