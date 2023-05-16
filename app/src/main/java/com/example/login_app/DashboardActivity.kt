@@ -1,6 +1,8 @@
 package com.example.login_app
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -22,5 +24,14 @@ class DashboardActivity : AppCompatActivity() {
         val welcomeText = "Welcome " + intent.getStringExtra("username") + "!"
         val tvWelcome = findViewById<TextView>(R.id.tvWelcome)
         tvWelcome.text = welcomeText
+
+//        etButton.setOnClickListener {
+//            val Name = etUsername.getText().toString();
+//            loginUser(this, Name + "Logged in successfully")
+//        }
+
+        this.findViewById<Button>(R.id.btnMovie).setOnClickListener{
+            startActivity(Intent(this, MovieSelection1::class.java))
+        }
     }
 }
