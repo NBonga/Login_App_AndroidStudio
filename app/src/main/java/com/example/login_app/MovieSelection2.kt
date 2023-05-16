@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 
 class MovieSelection2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,6 +15,10 @@ class MovieSelection2 : AppCompatActivity() {
 
         this.findViewById<Button>(R.id.button_second).setOnClickListener{
             startActivity(Intent(this, MovieSelection1::class.java))
+        }
+
+        this.findViewById<TextView>(R.id.logoutLink).setOnClickListener{
+            startActivity(Intent(this, LoginActivity::class.java))
         }
 
         val imageView1 = findViewById<ImageView>(R.id.angryBird)

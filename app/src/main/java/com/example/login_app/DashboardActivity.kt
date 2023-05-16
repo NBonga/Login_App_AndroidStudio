@@ -11,6 +11,7 @@ class DashboardActivity : AppCompatActivity() {
 
     lateinit var welcomeText: String
     lateinit var tvWelcome: TextView
+    lateinit var btnMovie: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,11 +27,11 @@ class DashboardActivity : AppCompatActivity() {
         tvWelcome.text = welcomeText
 
 //        etButton.setOnClickListener {
-//            val Name = etUsername.getText().toString();
-//            loginUser(this, Name + "Logged in successfully")
-//        }
+//         val Name = etUsername.getText().toString();
+//         loginUser(this, Name + "Logged in successfully")
+//      }
 
-        this.findViewById<Button>(R.id.btnMovie).setOnClickListener{
+        this.findViewById<Button>(R.id.btnnMovie).setOnClickListener{
             startActivity(Intent(this, MovieSelection1::class.java))
         }
     }
