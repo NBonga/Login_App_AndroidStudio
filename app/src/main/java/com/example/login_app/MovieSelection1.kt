@@ -31,6 +31,7 @@ class MovieSelection1 : AppCompatActivity() {
         imageView2.setOnClickListener {
             openYouTubeVideo("https://www.youtube.com/watch?v=d9MyW72ELq0&pp=ygUQYXZhdGFyIDIgdHJhaWxlcg%3D%3D")
         }
+
         val imageView3 = findViewById<ImageView>(R.id.frozen)
         imageView3.setOnClickListener {
             openYouTubeVideo("https://www.youtube.com/watch?v=Zi4LMpSDccc&pp=ygUQZnJvemVuIDIgdHJhaWxlcg%3D%3D")
@@ -38,6 +39,26 @@ class MovieSelection1 : AppCompatActivity() {
         val imageView4 = findViewById<ImageView>(R.id.blackWidow)
         imageView4.setOnClickListener {
             openYouTubeVideo("https://www.youtube.com/watch?v=ybji16u608U&pp=ygUUYmxhY2sgd2lkb3cgdHJhaWxlciA%3D")
+        }
+        val imageView5 = findViewById<ImageView>(R.id.johnwick)
+        imageView5.setOnClickListener {
+            openYouTubeVideo("https://www.youtube.com/watch?v=C0BMx-qxsP4&pp=ygUTam9obiB3aWNrIDEgdHJhaWxlcg%3D%3D")
+        }
+        val imageView6 = findViewById<ImageView>(R.id.drag)
+        imageView6.setOnClickListener {
+            openYouTubeVideo("https://www.youtube.com/watch?v=PPOaxHqoYxo&pp=ygUXZHJhZyBtZSB0byBoZWxsIHRyYWlsZXI%3D")
+        }
+        val imageView7 = findViewById<ImageView>(R.id.theLittle)
+        imageView7.setOnClickListener {
+            openYouTubeVideo("https://www.youtube.com/watch?v=kpGo2_d3oYE&pp=ygUadGhlIGxpdHRsZSBtZXJtYWlkIHRyYWlsZXI%3D")
+        }
+        val imageView8 = findViewById<ImageView>(R.id.norbit)
+        imageView8.setOnClickListener {
+            openYouTubeVideo("https://www.youtube.com/watch?v=-_x0rfEce4U&pp=ygUObm9yYml0IHRyYWlsZXI%3D")
+        }
+        val imageView9 = findViewById<ImageView>(R.id.thecon)
+        imageView9.setOnClickListener {
+            openYouTubeVideo("https://www.youtube.com/watch?v=ejMMn0t58Lc&pp=ygUXdGhlIGNvbmp1cmluZyAxIHRyYWlsZXI%3D")
         }
     }
     private fun openYouTubeVideo(videoUrl: String) {
