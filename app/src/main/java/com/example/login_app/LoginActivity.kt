@@ -36,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         this.findViewById<TextView>(R.id.tvRegisterLink).setOnClickListener{
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
 

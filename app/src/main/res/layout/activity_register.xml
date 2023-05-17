@@ -107,9 +107,9 @@
 
             <Button
                 android:id="@+id/btnRegister"
-                android:layout_width="350dp"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:background="@android:color/holo_orange_dark"
+                android:backgroundTint="@color/colorPrimary"
                 android:text="REGISTER"
                 android:textColor="@android:color/background_dark"
                 android:textSize="16sp"
