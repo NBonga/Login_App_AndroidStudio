@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:text="@string/movie_selection"
         android:textColor="@color/white"
         android:textSize="40dp" />
@@ -53,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="20dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView1"
